@@ -12,9 +12,6 @@ port = 465 #SSL port.
 sender_email = ""
 receiver_email = ""
 
-'''
-This will be a script to check the stock of gamestop's PS5. It will not work on other sites.
-'''
 def main():
 	context = ssl.create_default_context()
 	with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
