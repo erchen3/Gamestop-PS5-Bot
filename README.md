@@ -1,7 +1,7 @@
 # Gamestop-PS5-Bot
 
 ## Why?
-Playstation announced not too long ago the release of the PS5. I thought it would be a fun learning exercise to write a script that would essentially notify you via e-mail when a PS5 was available. It only works on the GameStop website at the moment, but I hope it serves as a stepping stone to make it work on multiple websites. ☺️
+Playstation announced not too long ago the release of the PS5. I thought it would be a fun learning exercise to write a script that would essentially notify you via e-mail when a PS5 was available. It only works on the GameStop website at the moment, but I hope it serves as a stepping stone to make your own scripts too. ☺️
 
 
 ## Things to note
