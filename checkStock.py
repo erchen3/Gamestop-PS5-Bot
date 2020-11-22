@@ -30,11 +30,11 @@ def main():
 			soup = BeautifulSoup(response.read(), 'html.parser')
 			
 			#Step 2: Begin DOM manipulation.
-			metaData = soup.find("button", {"class":"add-to-cart btn btn-primary"})['data-gtmdata']
-			convertedData = json.loads(metaData)
+			meta_data = soup.find("button", {"class":"add-to-cart btn btn-primary"})['data-gtmdata']
+			converted_data = json.loads(meta_data)
 			
 			#Step 3: Check availability.
-			if convertedData['productInfo']['availability'] != 'Not Available':
+			if converted_data['productInfo']['availability'] != 'Not Available':
 				server.sendmail(sender_email, receiver_email, "PS5 is Available!")
 				time.sleep(2)
 			else:
