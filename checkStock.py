@@ -17,7 +17,6 @@ def main():
 	with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
 		#Step 0: log in
 		server.login(sender_email,getpass())
-
 		while True:
 			#Step 1: Get the http response of interest and then feed it to beautifulsoup to begin processing.
 			request = urllib.request.Request(
@@ -27,12 +26,11 @@ def main():
 					'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
 				}
 			)
-
 			response = urllib.request.urlopen(request)
 			soup = BeautifulSoup(response.read(), 'html.parser')
+			
 			#Step 2: Begin DOM manipulation.
 			metaData = soup.find("button", {"class":"add-to-cart btn btn-primary"})['data-gtmdata']
-
 			convertedData = json.loads(metaData)
 			
 			#Step 3: Check availability.
