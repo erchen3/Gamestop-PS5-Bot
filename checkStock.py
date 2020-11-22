@@ -41,7 +41,6 @@ def main():
 				server.sendmail(sender_email, receiver_email, "PS5 is Available!")
 				time.sleep(2)
 			else:
-				#server.sendmail(sender_email, receiver_email, "Not available yet.")
 				time.sleep(60)
 
 if __name__ == "__main__":
