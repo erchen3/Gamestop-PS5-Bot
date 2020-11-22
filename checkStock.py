@@ -19,7 +19,6 @@ def main():
 		server.login(sender_email,getpass())
 
 		while True:
-
 			#Step 1: Get the http response of interest and then feed it to beautifulsoup to begin processing.
 			request = urllib.request.Request(
 				URL,
