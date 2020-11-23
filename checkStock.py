@@ -16,7 +16,7 @@ def main():
 	context = ssl.create_default_context()
 	with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
 		#Step 0: log in
-		server.login(sender_email,getpass())
+		server.login(sender_email, getpass())
 		while True:
 			#Step 1: Get the http response of interest and then feed it to beautifulsoup to begin processing.
 			request = urllib.request.Request(
